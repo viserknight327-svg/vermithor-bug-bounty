@@ -10,7 +10,7 @@ class ReconAnalyzer:
         """
         Analyzes raw reconnaissance data using AI to identify high-value targets and attack surface.
         """
-        system_prompt = "You are an expert bug bounty hunter and reconnaissance specialist. Analyze the provided recon data to identify high-value assets, unusual configurations, and potential entry points."
+        system_prompt = "You are an expert bug bounty hunter and reconnaissance specialist. Your task is to analyze raw reconnaissance data (subdomains, live hosts, technologies, open ports) to identify high-value assets, unusual configurations, and potential entry points. Focus on identifying assets that align with common bug bounty program scopes, prioritize targets based on potential impact and ease of exploitation, and suggest next steps for deeper investigation, including potential attack surface expansion and specific manual checks. Consider OWASP methodologies and common bug bounty trends (e.g., API endpoints, cloud assets, authentication flows)."
         user_prompt = f"Analyze the following reconnaissance data and provide a structured summary with target prioritization and next-step suggestions:\n\n{recon_data}"
 
         try:

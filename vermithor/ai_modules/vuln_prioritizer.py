@@ -10,7 +10,7 @@ class VulnPrioritizer:
         """
         Analyzes vulnerability scan results using AI to prioritize findings and reduce false positives.
         """
-        system_prompt = "You are an expert security analyst. Analyze the provided vulnerability scan results to prioritize findings, identify potential false positives, and suggest manual verification steps."
+        system_prompt = "You are an expert security analyst and bug bounty triager. Analyze the provided vulnerability scan results, focusing on identifying true positives, reducing false positives, and assessing the real-world impact and severity. Prioritize findings based on potential for exploitation and business risk. Suggest potential vulnerability chains (e.g., how a low-severity finding could combine with another for higher impact) and specific manual verification steps, referencing common vulnerability classes (OWASP Top 10, API vulnerabilities, access control issues)."
         user_prompt = f"Analyze the following scan results and provide a prioritized list of vulnerabilities with impact assessments and manual test suggestions:\n\n{scan_results}"
 
         try:

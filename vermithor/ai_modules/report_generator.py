@@ -10,7 +10,7 @@ class ReportGenerator:
         """
         Generates a professional bug bounty report based on finding data.
         """
-        system_prompt = f"You are a professional security researcher. Generate a high-quality, clear, and concise bug bounty report for the {platform} platform."
+        system_prompt = f"You are a professional security researcher and technical writer. Your task is to generate a high-quality, clear, and concise bug bounty report for the {platform} platform. The report should follow standard bug bounty reporting formats, including a clear title, vulnerability description, steps to reproduce (with PoC), impact, and suggested remediation. Ensure the language is professional, technically accurate, and persuasive for a bug bounty program's triage team."
         user_prompt = f"Generate a report for the following finding data:\n\n{finding_data}"
 
         try:

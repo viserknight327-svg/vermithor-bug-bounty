@@ -104,7 +104,30 @@ The input file should be a JSON file detailing the vulnerability, its impact, st
 
 The command will output a draft bug report, which you can then review, refine, and submit to the bug bounty platform.
 
-### 2.5. `config` Command
+### 2.5. `autopilot` Command
+
+The `autopilot` command provides a fully automated hunting experience by chaining reconnaissance, AI-driven prioritization, and targeted vulnerability scanning.
+
+**Usage:**
+
+```bash
+python vermithor/main.py autopilot <target_domain>
+```
+
+**Example:**
+
+```bash
+python vermithor/main.py autopilot example.com
+```
+
+**Workflow:**
+
+1.  **Reconnaissance:** Executes Subfinder and httpx to identify subdomains and live hosts.
+2.  **AI Analysis:** Analyzes live host data to prioritize the most promising targets.
+3.  **Targeted Scanning:** Automatically runs Nuclei on the top-prioritized target.
+4.  **Final AI Review:** Analyzes scan results and presents the most likely vulnerabilities.
+
+### 2.6. `config` Command
 
 The `config` command allows you to manage Vermithor's configuration, primarily for setting API keys for LLM providers.
 
