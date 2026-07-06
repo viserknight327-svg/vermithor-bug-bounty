@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/your-username/vermithor-bug-bounty/discussions/new?category=q-a
+    about: Ask a question about Vermithor or bug bounty hunting.
+  - name: Report a security vulnerability
+    url: https://github.com/your-username/vermithor-bug-bounty/security/policy
+    about: Please report security vulnerabilities responsibly.
